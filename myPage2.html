@@ -1,0 +1,1144 @@
+
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US" prefix="og: http://ogp.me/ns#">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US" prefix="og: http://ogp.me/ns#">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8) ]><!-->
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<!--<![endif]-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="author" href="https://plus.google.com/u/0/+WILSONGIOVANNYVELANDIABARRETO/posts"/>
+  <link rel="publisher" href="https://plus.google.com/u/0/+WILSONGIOVANNYVELANDIABARRETO/posts"/>
+  <meta name="verify-v1" content=""/>
+  <meta name="msvalidate.01" content=""/>
+  <meta name="Googlebot" content="index, follow"/>
+  <meta name="description" content="Esta es una página de WEb para la presentación, promoción y masificación de productos y servicios de diseño y desarrollo de aplicaciones WEB, APPs, WEbsites, tiendas en linea, aplicaciones de escritorio, aplicaciones nativas para dispositivos moviles, ect."/>
+  <meta name="keywords" content="Custom website design, website design, Wilson web design, Wilson Velandia web design, Wilson Velandia Web design firms, Wilson Velandia Web designers, Wilson Velandia web development, Wilson Velandia website design, Web design firms Wilson Velandia, web design Wilson Velandia, Web design Wilson Velandia NC, Web designers Wilson Velandia, Web developers Wilson Velandia, Web developers Wilson Velandia, Web development Raleigh, Website design Wilson Velandia"/>
+  <title>Wilson Velandia Design & Mobile Apps Development Firm - Imaginovation</title>
+  <!-- <link rel="profile" href="http://gmpg.org/xfn/11"> -->
+  <!-- <link rel="pingback" href="http://www.imaginovation.net/xmlrpc.php"> -->
+  <!--[if lt IE 9]>
+  <script src="js/html5.js"></script>
+      <![endif]-->
+  <link rel="stylesheet" type="text/css" media="all" href="css/styleplax.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="fonts/font.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/plax.js"></script>
+  <script type="text/javascript" src="js/jquery.localscroll-1.2.7-min.js"></script>
+  <script type="text/javascript" src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
+  <script type="text/javascript" src="js/jquery.flexslider.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+  <script type="text/javascript" src="js/homepagescript.js"></script>
+  <script type="text/javascript" src="js/cbpScroller.js"></script>
+  <script type="text/javascript" src="js/jquery.bxslider.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#mobilemenu').click(function(){
+        $('.mobile_menus').slideToggle('slow');
+        return false;
+      });
+      $(".mobile_menus ul.sub-menu").css('display','none');
+      //mobile sub menu toggle jquery         
+      $(".mobile_menus ul li a").mouseover(function(){                
+        $(this).next('.mobile_menus ul li ul.sub-menu').slideToggle('slow');
+      });
+      $(window).on('load resize', function(){
+        var height = $(window).height();
+        var winheight = height - 90;
+        $('ul.slides11 li').css({'height':winheight+'px'});
+        $('#gallery').css({'height':winheight+'px'});
+        $('#gallery .bx-viewport').css({'height':winheight+'px'});
+      });
+    });
+  </script>
+  <script type="text/javascript">
+    $(window).load(function(){
+      $('#dvLoading-home').hide();
+      $('#showvideos').click(function(){ 
+        $('.home_qoute_video').fadeIn(1500);
+          //player.playVideo();
+        onYouTubePlayerAPIReady();
+      });
+      $('.btn_close').click(function(){
+        $('.home_qoute_video').fadeOut(1500); 
+        //location.reload();  
+        //player.stopVideo(); 
+        //First get the  iframe URL
+        var url = $('#player').attr('src');
+
+        //Then assign the src to null, this then stops the video been playing
+        $('#player').attr('src', '');
+
+        // Finally you reasign the URL back to your iframe, so when you hide and load it again you still have the link
+        $('#player').attr('src', url);
+      }); 
+                   
+      $('.slides11').bxSlider({
+        auto:true,
+        autoStart:true,
+        pager:false,
+        autoHover:true,
+        pause:6000,
+        speed:1400,
+        controls:true,
+        onSlideAfter: function (currentSlideNumber, totalSlideQty, currentSlideHtmlObject) {
+          console.log(currentSlideHtmlObject);
+          $('.slides11 li').removeClass('active-slide');
+          $('.slides11>li').eq(currentSlideHtmlObject + 1).addClass('active-slide')
+        },
+        onSliderLoad: function () {
+            $('.slides11>li').eq(1).addClass('active-slide')
+        },              
+      });
+      runCheck();
+
+      function runCheck(){
+        if ($('.slides11>li.slid3').hasClass('active-slide')) {
+          $('img.translate').addClass("loadedimg");
+          $('img.translate-center').addClass("loadedimg-center");
+          $('img.translate-center-n').addClass("loadedimg-center-n");
+          $('img.translate-right').addClass("loadedimg-right");
+          $('img.translate1').addClass("loadedimg1");
+          $('p.topanimateone').addClass("loadedimgone2");
+          $('.botanimateone').addClass("loadedimgbotone");
+        }
+        else if($('.slides11>li.slid2').hasClass('active-slide')) {
+          $('img.chess-white').addClass("chessnormal");
+          $('img.chess-black').addClass("chessnormal");
+        }   
+        setTimeout(function(){runCheck()},1000);
+      }
+    });
+       
+    var tag = document.createElement('script');
+    tag.src = "http://www.youtube.com/player_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+     // 6. This function creates an <iframe> (and YouTube player)
+    //    after the API code downloads.
+    var player;
+    function onYouTubePlayerAPIReady() {
+      player = new YT.Player('player', {
+        height: '390',
+        width: '640',
+        videoId: 'fjNiftR0WKM',
+        playerVars: { 'autoplay': 0, 'rel': 0, 'hd': 1, 'cc_load_policy': 1, 'showinfo': 0, 'wmode':'transparent', 'color':'white' },
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      }); 
+    } 
+    function onPlayerReady(event) {
+      //event.target.playVideo();
+    }
+    var done = false;
+    function onPlayerStateChange(event) {
+      if (event.data == YT.PlayerState.PLAYING && !done) {
+        //setTimeout(stopVideo, 6000);
+        done = true;
+      }
+    }
+    function stopVideo() {
+      player.stopVideo();
+    }
+  </script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-30663636-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.24 - http://yoast.com/wordpress/seo/ -->
+  <meta name="description" content="Wilson Velandia, based website design firm Imaginovation provides custom web design &amp; development services that include eCommerce, website application development, Mobile Apps Development, SEO, and Digital Marketing services."/>
+  <meta name="keywords" content="Incredible designers and developers who design and build websites that engage with a huge audience. Wilson Velandia based web designer turn your strategy and specification into an exciting online presence. We are the specialists in providing quality web design, E-commerce design, website application development, SEO, Logo design and internet marketing services."/>
+  <!-- <link rel="canonical" href="http://www.imaginovation.net/" /> -->
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Wilson Velandia Web Design, Website Development, Mobile Apps Development - Imaginovation" />
+  <meta property="og:description" content="Wilson Velandia, based website design firm Imaginovation provides custom web design &amp; development services that include eCommerce, website application development, Mobile Apps Development, SEO, and Digital Marketing services." />
+  <meta property="og:url" content="" />
+  <meta property="og:site_name" content="Wilson Velandia" />
+  <!-- / Yoast WordPress SEO plugin. -->
+
+  <link rel="alternate" type="application/rss+xml" title="Imaginovation &raquo; Feed" href="http://www.imaginovation.net/feed/" />
+  <link rel="alternate" type="application/rss+xml" title="Imaginovation &raquo; Comments Feed" href="http://www.imaginovation.net/comments/feed/" />
+  <link rel='stylesheet' id='contact-form-7-css'  href='css/styles2.css?ver=3.7' type='text/css' media='all' />
+  <link rel='stylesheet' id='twentyfourteen-lato-css'  href='//fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C900%2C300italic%2C400italic%2C700italic' type='text/css' media='all' />
+  <link rel='stylesheet' id='genericons-css'  href='css/genericons.css?ver=3.0.2' type='text/css' media='all' />
+  <link rel='stylesheet' id='twentyfourteen-style-css'  href='css/style3.css?ver=3.8' type='text/css' media='all' />
+  <!--[if lt IE 9]>
+  <link rel='stylesheet' id='twentyfourteen-ie-css'  href='css/ie.css?ver=20131205' type='text/css' media='all' />
+  <![endif]-->
+  <script type='text/javascript' src='js/jquery.js?ver=1.10.2'></script>
+  <script type='text/javascript' src='js/jquery-migrate.min.js?ver=1.2.1'></script>
+  <!-- <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.imaginovation.net/xmlrpc.php?rsd" /> -->
+  <!-- <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.imaginovation.net/wp-includes/wlwmanifest.xml" /> --> 
+  <meta name="generator" content="WordPress 3.8" />
+  <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+  <link rel="stylesheet" href="css/responsive.css" type="text/css">
+  <link rel="stylesheet" href="css/default.css" />
+  <link rel="stylesheet" href="css/component.css" />
+
+  <!-- <div itemscope itemtype="http://schema.org/LocalBusiness">
+    <span itemprop="name" content="Imaginovation LLC"></span>
+    <span itemprop="description" content="Imaginovation, LLC is a leading Raleigh based web development and design firm providing full services like software development, mobile apps development, web development, web design, digital marketing and web hosting in North Carolina."> </span>
+    <div itemscope="address" itemtype="http://schema.org/PostalAddress">
+      <span itemprop="streetAddress" content="8369 Creedmoor Road Suite 100"></span>
+      <span itemprop="addressLocality" content="Raleigh"></span>
+      <span itemprop="addressRegion" content="North Carolina"></span>
+      <span itemprop="postalCode" content="27613"></span>
+      <span itemprop="telephone" content="919-605-4348"></span>
+    </div>
+  </div> -->
+</head>
+<body class="home" onLoad="document.getElementById('loading').style.display = 'none';">
+  <div id="main" role="main">
+    <div id="dvLoading-home"></div>
+    <!--header section-->
+    <header id="masthead" class="site-header" role="banner">
+      <div class="cbp-af-header">
+        <div class="cbp-af-inner">
+          <div class="logoleft">
+            <h1 class="logo">
+              <a href="./" rel="home" title="Wilson Velandia">Wilson Velandia</a>
+            </h1>
+          </div>
+          <div class="menu_icons"> <a title="Menu" id="mobilemenu" href="javascript:void(0);">MENU</a> </div>
+          <div class="mobile_menus clearfix">
+            <div class="menu-mobile-menu-container">
+              <ul id="menu-mobile-menu" class="">
+                <li id="menu-item-687" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-687">
+                  <a title="Home" href="./">Inicio</a>
+                </li>
+                <li id="menu-item-1180" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1180">
+                  <a href="http://www.imaginovation.net/web-design-and-development-services-raleigh-nc/">Servicios</a>
+                  <ul class="sub-menu">
+                    <li id="menu-item-717" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-717">
+                      <a title=" Web Design Solutions" href="#">Soluciones de Diseño WEB</a>
+                      <ul class="sub-menu">
+                        <li id="menu-item-722" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-722">
+                          <a title="Web Design" href="./">Diseño WEB</a>
+                        </li>
+                        <li id="menu-item-720" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-720">
+                          <a title="Responsive Web Design" href="http://www.imaginovation.net/responsive-web-design-services-raleigh-nc/">Diseño WEB Responsive</a>
+                        </li>
+                        <li id="menu-item-719" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-719">
+                          <a title="Corporate Branding" href="http://www.imaginovation.net/branding-design-services-raleigh-nc/">Entidad Corporativa</a>
+                        </li>
+                        <li id="menu-item-718" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-718">
+                          <a title="Content Management Systems" href="http://www.imaginovation.net/content-management-system-cms-services-raleigh-nc/">Sistema de Administrador de Contenidos</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li id="menu-item-723" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-723">
+                      <a title=" Web Development &amp; Software Solutions" href="#">Desarrollo WEB &#038; Soluciones de Software</a>
+                      <ul class="sub-menu">
+                        <li id="menu-item-727" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-727">
+                          <a title="Web Development" href="./">Desarrollo WEB</a>
+                        </li>
+                        <li id="menu-item-726" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-726">
+                          <a title="E-Commerce  Development" href="http://www.imaginovation.net/e-commerce-development-services-raleigh-nc/">Desarrollo E-Commerce</a>
+                        </li>
+                        <li id="menu-item-721" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-721">
+                          <a title="Software Development" href="http://www.imaginovation.net/software-development-services-raleigh-nc/">Desarrollo de Software</a>
+                        </li>
+                        <li id="menu-item-724" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-724">
+                          <a title="Custom Application Development" href="http://www.imaginovation.net/custom-application-development-services/">Desarrollo de Software a la medida</a>
+                        </li>
+                        <li id="menu-item-725" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-725">
+                          <a title="Database Development" href="http://www.imaginovation.net/database-development-services-raleigh-nc/">Desarrollo de Base de Datos</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li id="menu-item-728" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-728">
+                      <a title="Digital Marketing Solutions" href="#">Soluciones de Marquetin Digital</a>
+                      <ul class="sub-menu">
+                        <li id="menu-item-883" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-883">
+                          <a title="Digital Marketing Campaigns" href="http://www.imaginovation.net/digital-marketing-agency-raleigh-nc/">Campañas de Marketin Digital</a>
+                        </li>
+                        <li id="menu-item-729" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-729">
+                          <a title="Internet Marketing" href="http://www.imaginovation.net/internet-marketing-services-raleigh-nc/">Marketing por Internet</a>
+                        </li>
+                        <li id="menu-item-884" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-884">
+                          <a title="Search Engine Optimization" href="http://www.imaginovation.net/search-engine-optimization-seo-services-raleigh-nc/">Optimización en Motores de Búsqueda</a>
+                        </li>
+                        <li id="menu-item-731" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-731">
+                          <a title="Social Media Marketing" href="http://www.imaginovation.net/social-media-marketing-services-raleigh-nc/">Marketing Social Media</a>
+                        </li>
+                        <li id="menu-item-730" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-730">
+                          <a title="Search Engine Marketing" href="http://www.imaginovation.net/search-engine-marketing-services-raleigh-nc/">Marketing en Motores de Búsqueda</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li id="menu-item-732" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-732">
+                      <a title="Mobile Solutions" href="#">Soluciones en Móviles</a>
+                      <ul class="sub-menu">
+                        <li id="menu-item-734" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-734">
+                          <a title="Mobile Design" href="http://www.imaginovation.net/mobile-web-design-and-development-firm/">Diseño en Móbiles</a>
+                        </li>
+                        <li id="menu-item-733" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-733">
+                          <a title="Mobile Application Development" href="http://www.imaginovation.net/mobile-application-development-services-raleigh-nc/">Desarrollo de Aplicaciones para Móbiles</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li id="menu-item-735" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-735">
+                      <a title="Other Services" href="#">Otros Servicios</a>
+                      <ul class="sub-menu">
+                        <li id="menu-item-736" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-736">
+                          <a title="Hosting" href="./">Hosting</a>
+                        </li>
+                        <li id="menu-item-737" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-737">
+                          <a title="Maintenance" href="./">Mantenimiento</a>
+                        </li>
+                        <li id="menu-item-738" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-738">
+                          <a title="Testing" href="./">Pruebas</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li id="menu-item-700" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-700">
+                  <a title="Portfolio" href="./">Portfolio</a>
+                </li>
+                <li id="menu-item-747" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-747">
+                  <a title="About us" href="#">¿Quien Soy?</a>
+                  <ul class="sub-menu">
+                    <li id="menu-item-741" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-741">
+                      <a title="Who we are?" href="./">¿Con Quien?</a>
+                    </li>
+                    <li id="menu-item-742" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-742">
+                      <a title="Why Imaginovation ?" href="./">¿Por Que YO?</a>
+                    </li>
+                    <li id="menu-item-740" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-740">
+                      <a title="Technologies" href="./">¿Que Usamos?</a>
+                    </li>
+                    <li id="menu-item-937" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-937">
+                      <a title="Our Team" href="./">¿Como Pasa?</a>
+                    </li>
+                    <li id="menu-item-739" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-739">
+                      <a title="Our Process" href="./">¿no se que va aca?</a>
+                    </li>
+                    <li id="menu-item-743" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-743">
+                      <a title="Client Testimonials" href="./">¿Que Dicen?</a>
+                    </li>
+                  </ul>
+                </li>
+                <li id="menu-item-693" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-693">
+                  <a title="Blog" href="./">Blog</a>
+                </li>
+                <li id="menu-item-748" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-748">
+                  <a title="Contact Us" href="#">¿Me Necesitas?</a>
+                  <ul class="sub-menu">
+                    <li id="menu-item-695" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-695">
+                      <a title="Contact Us" href="./">Contactanos</a>
+                    </li>
+                    <li id="menu-item-1046" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1046">
+                      <a title="Career" href="./">¿Donde Aprendí?</a>
+                    </li>
+                    <li id="menu-item-744" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-744">
+                      <a title="Become a partner" href="./">¿Quieres Entrar?</a>
+                    </li>
+                    <li id="menu-item-745" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-745">
+                      <a title="Referral Marketing" href="./">¿Me REcomiendas?</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="headright">
+            <div class="searchtop">
+              <a href="./" class="searchtop-a" title="Request a Quote">Solicitar un Presupuesto</a>
+              <span class="contact">
+                <a href="tel:(320) 427-4564">(320) 427-4564</a>
+              </span>
+              <a href="javascript:void(0);" class="clogin" title="Client Login">LOGIN CLIENTE</a>
+            </div>
+            <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+              <div class="menu-primary-container">
+                <ul id="menu-primary" class="nav-menu">
+                  <li id="menu-item-32" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-32">
+                    <a title="Home" href="http://www.imaginovation.net/">Inicio</a>
+                  </li>
+                  <li id="menu-item-1179" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1179">
+                    <a title="Services" href="./">Servicios</a>
+                    <ul class="sub-menu">
+                      <li id="menu-item-773" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-773">
+                        <a title="Web Design Solutions" href="#">Soluciones de Diseño WEB</a>
+                        <ul class="sub-menu">
+                          <li id="menu-item-469" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-469">
+                            <a title="Web Design" href="./">Diseño WEB</a>
+                          </li>
+                          <li id="menu-item-465" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-465">
+                            <a title="Responsive Web Design" href="http://www.imaginovation.net/responsive-web-design-services-raleigh-nc/">Diseño WEB Responsive</a>
+                          </li>
+                          <li id="menu-item-456" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-456">
+                            <a title="Corporate Branding" href="http://www.imaginovation.net/branding-design-services-raleigh-nc/">Entidad Corporativa</a>
+                          </li>
+                          <li id="menu-item-455" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-455">
+                            <a title="Content Management Systems" href="http://www.imaginovation.net/content-management-system-cms-services-raleigh-nc/">Sistema de Administrador de Contenidos</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li id="menu-item-518" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-518">
+                        <a title="Web Development and Software Solutions" href="#">Desarrollo WEB &#038; Soluciones de Software</a>
+                        <ul class="sub-menu">
+                          <li id="menu-item-470" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-470">
+                            <a title="Web Development" href="./">Web Development</a>
+                          </li>
+                          <li id="menu-item-459" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-459">
+                            <a title="E-Commerce  Development" href="./">E-Commerce  Development</a>
+                          </li>
+                          <li id="menu-item-467" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-467">
+                            <a title="Software Development" href="./">Software Development</a>
+                          </li>
+                          <li id="menu-item-457" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-457">
+                            <a title="Custom Application Development" href="./">Custom Application Development</a>
+                          </li>
+                          <li id="menu-item-458" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-458">
+                            <a title="Database Development" href="./">Database Development</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li id="menu-item-519" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-519">
+                        <a title="Digital Marketing Solutions" href="#">Digital Marketing Solutions</a>
+                        <ul class="sub-menu">
+                          <li id="menu-item-882" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-882">
+                            <a title="Digital Marketing Campaigns" href="./">Digital Marketing Campaigns</a>
+                          </li>
+                          <li id="menu-item-461" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-461">
+                            <a title="Internet Marketing" href="./">Internet Marketing</a>
+                          </li>
+                          <li id="menu-item-865" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-865">
+                            <a title="Search Engine Optimization" href="./">Search Engine Optimization</a>
+                          </li>
+                          <li id="menu-item-466" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-466">
+                            <a title="Social Media Marketing" href="./">Social Media Marketing</a>
+                          </li>
+                          <li id="menu-item-507" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-507">
+                            <a title="Search Engine Marketing" href="./">Search Engine Marketing</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li id="menu-item-520" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-520">
+                        <a href="#">Mobile Solutions</a>
+                        <ul class="sub-menu">
+                          <li id="menu-item-462" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-462">
+                            <a title="Mobile Design" href="./">Mobile Design</a>
+                          </li>
+                          <li id="menu-item-558" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-558">
+                            <a title="Mobile Application Development" href="./">Mobile Application Development</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li id="menu-item-521" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-521">
+                        <a href="#">Other Services</a>
+                        <ul class="sub-menu">
+                          <li id="menu-item-522" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-522">
+                            <a title="Hosting" href=".c/">Hosting</a>
+                          </li>
+                          <li id="menu-item-497" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-497">
+                            <a title="Maintenance" href="./">Maintenance</a>
+                          </li>
+                          <li id="menu-item-523" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-523">
+                            <a title="Testing" href="./">Testing</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li id="menu-item-29" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29">
+                    <a title="Portfolio" href="./">Portfolio</a>
+                  </li>
+                  <li id="menu-item-567" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-567">
+                    <a title="About Us" href="h./">¿Quien Soy?</a>
+                    <ul class="sub-menu">
+                      <li id="menu-item-524" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-524">
+                        <a title="Who Are We?" href="h./">¿Con Quien?</a>
+                      </li>
+                      <li id="menu-item-525" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-525">
+                        <a title="Why Imaginovation ?" href="./">¿Por que YO?</a>
+                      </li>
+                      <li id="menu-item-468" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-468">
+                        <a title="Technologies" href="./">Tecnologias</a>
+                      </li>
+                      <li id="menu-item-936" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-936">
+                        <a title="Our Team" href="./">Administración</a>
+                      </li>
+                      <li id="menu-item-463" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-463">
+                        <a title="Our Process" href="./">¿Como lo Hacemos?</a>
+                      </li>
+                      <li id="menu-item-526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-526">
+                        <a title="Client Testimonials" href="./">¿Que dicen?</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li id="menu-item-26" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26">
+                    <a title="Blog" href="http://www.imaginovation.net/blog/">Blog</a>
+                  </li>
+                  <li id="menu-item-27" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-27">
+                    <a title="Contact Us" href="./">¿Me Necesitas?</a>
+                    <ul class="sub-menu">
+                      <li id="menu-item-1047" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1047">
+                        <a title="Career" href="./">¿Como lo Aprendí?</a>
+                      </li>
+                      <li id="menu-item-527" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-527">
+                        <a title="Become a partner" href="./">¿Quieres Ingresar?</a>
+                      </li>
+                      <li id="menu-item-464" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-464">
+                        <a title="Referral Marketing" href="./">¿Me Recomiendas?</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div> 
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <ul id="header" class="fixed">
+      <li id="nav">
+        <ul>
+          <li><a id="nav_frame1" href="#gallery" title="Scroll to Home">Home</a></li>
+          <li><a id="nav_frame2" href="#services" title="Scroll to services">About us</a></li>
+          <li><a id="nav_frame2" href="#portfolio" title="Scroll to What We Do?">What We Do?</a></li>
+          <li><a id="nav_frame3" href="#news" title="Scroll to Web Design & Application Spotlight"> Web Design & Application Spotlight</a></li>
+          <li><a id="nav_frame4" href="#video" title="Scroll to Testimonials ">Testimonials</a></li>
+          <li><a id="nav_frame4" href="#client" title="Scroll to Our Clients">Our Clients </a></li>
+          <li><a id="nav_frame4" href="#credibility" title="Scroll to Press">Press</a></li>
+        </ul>
+      </li>
+    </ul>
+    <!--header section-->
+    <div class="continer">
+      <div id="gallery" class="frame">      
+        <div class="gallerywrap">
+          <div class="gallery1">
+            <ul class="slides11">
+              <li class="slid1" style="background: url('img/whattodo.jpg') bottom center;background-repeat:no-repeat;background-size:cover;-webkit-background-size:cover;overflow:hidden;">
+                <article class="hometext">
+                  <div class="story">
+                    <div class="ideia-home2">
+                      <p class="ideia-home2_title topanimate">From Small Businesses To Large Companies</p>
+                      <ul>
+                        <li class="home_serv1">
+                          <a href="./" title="Website Design">
+                            <img src="img/webdesign-home-icon.png" alt="webdesign-home-icon" width="74" height="79" class="alignnone size-full wp-image-1067" />
+                          </a><br />
+                          <h2>Website<br/><span>Design</span> </h2>
+                        </li>
+                        <li class="home_serv2">
+                          <a href="./" title="Website Applications">
+                            <img src="img/web-apps-home-icon.png" alt="web-apps-home-icon" width="80" height="70" class="alignnone size-full wp-image-1068" />
+                          </a><br />
+                          <h2>Website<br/><span> Applications</span> </h2>
+                        </li>
+                        <li class="home_serv3">
+                          <a href="http://www.imaginovation.net/software-development-services-raleigh-nc/" title="Software Development">
+                            <img src="img/soft-development-home-icon.png" alt="soft-development-home-icon" width="70" height="70" class="alignnone size-full wp-image-1069" />
+                          </a><br />
+                          <h2>Software<br/> <span>Development</span> </h2>
+                        </li>
+                        <li class="home_serv4">
+                          <a href="http://www.imaginovation.net/mobile-application-development-services-raleigh-nc/" title="Mobile Apps">
+                            <img src="img/mobile-apps-home-icon.png" alt="mobile-apps-home-icon" width="80" height="76" class="alignnone size-full wp-image-1070" />
+                          </a><br />
+                          <h2>Mobile <br/><span>Apps</span> </h2>
+                        </li>
+                        <li class="home_serv5">
+                          <a href="http://www.imaginovation.net/internet-marketing-services-raleigh-nc/" title="Internet Marketing">
+                            <img src="img/interner-home-icon.png" alt="interner-home-icon" width="79" height="69" class="alignnone size-full wp-image-1071" />
+                          </a><br />
+                          <h2>Internet <br/><span>Marketing</span> </h2>
+                        </li>
+                      </ul>
+                      <div class="botanimate ideia-home2_cont ">WE HAVE YOU <span>COVERED</span></div>
+                    </div>
+                  </div>
+                </article>
+              </li>
+              <li class="slid2" style="background: url('img/home3-bg.jpg') bottom center;background-repeat:no-repeat;background-size:cover;-webkit-background-size:cover;overflow:hidden;">
+                <article class="hometext">
+                  <div class="story">
+                    <div class="ideia-home3">
+                      <p class="home3_choose">WHY CHOOSE US?</p>
+                      <p><a class="submitbutton_mobile" href="./">VIEW OUR PORTFOLIO</a></p>
+                      <p>It’s simple, we do it better&#8230;</p>
+                      <p class="hometext_top">We’re always one step ahead&#8230; <span>CHECKMATE!</span></p>
+                      <p><a class="submitbutton_port" href="./">VIEW OUR PORTFOLIO</a></p>
+                      <div class="home3animate">
+                        <div class="home3animate1">
+                          <img class="chess-black" src="img/chess-black.png" alt="chess-black" width="220" height="229" class="alignnone size-full wp-image-1131" />
+                          <img class="chess-white" src="img/chess-white.png" alt="chess-white" width="149" height="260" class="alignnone size-full wp-image-1132" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </li>
+              <li class="slid3" style="background: url('img/einsteen.jpg') bottom center;background-repeat:no-repeat;background-size:cover;-webkit-background-size:cover;overflow:hidden;">
+                <article class="hometext">
+                  <div class="story">
+                    <div class="ideia">
+                      <p class="topanimateone">Turning your <span>IDEAS</span> into a digital <span>REALITY</span></p>
+                      <p class="logo-text-mobile">
+                        <img class="translate" src="img/logo.png" alt="logo" width="280" height="57" class="alignnone size-full wp-image-1060" />
+                      </p>
+                      <p class="logo-text">
+                        <img class="translate" src="img/logo-left.png" alt="logo-left" width="224" height="134" class="alignnone size-full wp-image-1061" />
+                        <img class="translate-center" src="img/logo-center.png" alt="logo-center" width="159" height="134" class="alignnone size-full wp-image-1062" />
+                        <img class="translate-right" src="img/logo-right.png" alt="logo-right" width="281" height="134" class="alignnone size-full wp-image-1063" />
+                        <img class="logoanimate translate1" src="img/logo-text1.png" alt="logo-text1" width="434" height="17" class="alignnone size-full wp-image-1064" />
+                      </p>
+                      <p class="noboundary botanimateone">No Boundaries</p>
+                      <p>
+                        <a class="submitbutton" href="http://www.imaginovation.net/request-quote/" title="HIRE US">HIRE US</a>
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <section id="services" class="frame" data-speed="30" data-type="background" data-offsetY="20">
+        <div class="serv_inner">
+          <article class="services-main">
+            <div class="postservice animate3">
+              <p>
+                <span>
+                  <img src="img/quote-start.png" alt="quote-end" />
+                </span>
+                What sets Imaginovation  apart is not only what we offer, it is Our PEOPLE, Our PASSION &amp; Our EXECUTION...
+                <label class="quateend1">
+                  <img src="img/quote-end.png" alt="quote-end" />
+                </label>
+              </p>
+              <p class="author">Michael Georgiou</p>
+              <p class="founder">Founder</p>
+              <a href="javascript:void callPlayer(&quot;whateverID&quot;,&quot;playVideo&quot;)" title="Play Video" id="showvideos" class="submitbutton-3">PLAY VIDEO</a>
+            </div>
+            <div class="home_qoute_video" id="whateverID">
+              <div id="player"></div>
+              <p>
+                <a href="javascript:void callPlayer(&quot;whateverID&quot;,&quot;stopVideo&quot;)" title="Close" class="btn_close">Close</a>
+              </p>
+            </div>    
+          </article>
+        </div>
+      </section>
+      <section id="portfolio" class="frame" data-speed="7" data-type="background" data-offsetY="200">
+        <article class="postservice">
+          <p class="whatwedo">What We Do?</p>
+          <ul class="what_bg">
+            <li class="serv1">
+              <a href="./" title="Website Design">
+                <img src="img/webdesign-home-icon.png" alt="webdesign-icon" />
+              <h2>Website <br/><span>Design</span></h2>
+              </a> </li>
+            <li class="listtop serv2">
+              <a href="./" title="Website Applications">
+                <img src="img/web-apps-home-icon.png" alt="web-apps-icon" />
+                <h2>Website <br/><span>Applications</span></h2>
+              </a> </li>
+            <li class="serv3">
+              <a href="http://www.imaginovation.net/software-development-services-raleigh-nc/" title="Software Development">
+                <img src="img/soft-development-home-icon.png" alt="soft-development"/>
+                <h2>Software<br/><span>Development</span></h2>
+              </a> </li>
+            <li class="listtop serv4">
+              <a href="http://www.imaginovation.net/mobile-application-development-services-raleigh-nc/" title="Mobile Apps">
+                <img src="img/mobile-apps-home-icon.png" alt="mobile-apps" />
+                <h2>Mobile<br/><span>Apps</span></h2>
+              </a> </li>
+            <li class="serv5">
+              <a href="http://www.imaginovation.net/internet-marketing-services-raleigh-nc/" title="Internet Marketing">
+                <img src="img/interner-home-icon.png" alt="interner-hom" />
+                <h2>Internet<br/><span>Marketing</span></h2>
+              </a> </li>
+          </ul>
+        </article>
+      </section>
+      <section id="news" class="frame" data-speed="7" data-type="background" data-offsetY="320">
+        <article class="postservice">
+          <p class="whatwedo">Web Design &amp; Application Spotlight</p>
+          <div id="newswrap" class="mynewsslide1">
+            <ul class="slides13">
+              <li>
+                <div class="post slider-relative">
+                  <a href="./tedx-duke/?terms=website">
+                    <img width="720" height="410" src="img/home_tedx.jpg" class="attachment-homeportfolio-thumb wp-post-image" alt="home_tedx" title="Ted x duke" />
+                  </a>
+                  <div class="slider-text"> 
+                    <h2>Ted x duke</h2>
+                    <p>Enter this spectacular digital experience promoting speakers at Duke University that have a passion for collaboration and finding commonalities between people to solve real-world problems. &#8230;</p>
+                    <a href="http://www.tedxduke.com/" target="_blank" title="Visit site" class="submitbutton2">VISIT SITE</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="post slider-relative">
+                  <a href="./wilsonlaw/?terms=website">
+                    <img width="720" height="410" src="http://www.imaginovation.net/wp-content/uploads/2014/02/banner-port-slider3.jpg" class="attachment-homeportfolio-thumb wp-post-image" alt="banner-port-slider3" title="Wilson Law" />
+                  </a>
+                  <div class="slider-text">
+                    <h2>Wilson Law</h2>
+                    <p>Highly credible Raleigh personal injury law firm providing their clients with 24/7 online support and a user-friendly and sleek front-end design for the best convenience.  &#8230;</p>
+                    <a href="http://www.wilsonlawpa.com/" target="_blank" title="Visit site" class="submitbutton2">VISIT SITE</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="post slider-relative">
+                  <a href="./imagin-management/?terms=applications">
+                    <img width="720" height="410" src="img/home_imagin.jpg" class="attachment-homeportfolio-thumb wp-post-image" alt="home_imagin" title="Imagin Management" />
+                  </a>
+                  <div class="slider-text"> 
+                    <h2>Imagin Management</h2>
+                    <p>Custom built user-friendly customer relationship management, project/task system, invoicing system, bug tracking system, and more  &#8230;</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="post slider-relative">
+                  <a href="./principled-heart/?terms=website">
+                    <img width="720" height="410" src="http://www.imaginovation.net/wp-content/uploads/2014/02/banner-port-slider.jpg" class="attachment-homeportfolio-thumb wp-post-image" alt="banner-port-slider" title="Principled heart" />
+                  </a>
+                  <div class="slider-text">
+                    <h2>Principled heart</h2>
+                      <p>Learn about how this web-based lockbox empowers people to organize their financial life &#038; personal information so invaluable information passes to their family members at times of greatest need.  &#8230;</p>
+                      <a href="http://www.principledheart.com/" target="_blank" title="Visit site" class="submitbutton2">VISIT SITE</a>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="post slider-relative">
+                    <a href="./us-gbc-la/?terms=website">
+                      <img width="720" height="410" src="img/home_usgbc.jpg" class="attachment-homeportfolio-thumb wp-post-image" alt="home_usgbc" title="USGBC-LA" />
+                    </a>
+                    <div class="slider-text">
+                      <h2>USGBC-LA</h2>
+                      <p>The website promotes sustainability in LA County’s built environment by delivering access to knowledge, resources, recognition and networking. &#8230;</p>
+                      <a href="http://www.usgbc-la.org" target="_blank" title="Visit site" class="submitbutton2">VISIT SITE</a>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="post slider-relative">
+                    <span class="inprogress">yes</span>
+                    <a href="./arrichion/?terms=mobile-apps">
+                      <img width="720" height="410" src="img/home_arrichion.jpg" class="attachment-homeportfolio-thumb wp-post-image" alt="home_arrichion" title="Arrichion" />
+                    </a>
+                    <div class="slider-text">
+                      <h2>Arrichion</h2>
+                      <p>Ready for a mobile workout challenge? See who’s most fit in your gym while playing and sharing with others. &#8230;</p>
+                    </div>
+                  </div>
+                </li>
+            </ul>
+          </div>
+          <p class="home_port_viewmore">
+            <a href="./" title="View More" class="submitbutton-3">View More</a>
+          </p>
+        </article>
+      </section>
+      <section id="video" class="frame" data-speed="7" data-type="background" data-offsetY="400">
+        <article class="postservice">
+          <p class="whatwedo">Testimonials</p>
+          <div id="newswrap" class="testslider">
+            <ul class="slides12">
+              <li>
+                <div class="quote">
+                  <img src="img/testimonial-quat.png" alt="testimonial" />
+                </div>
+                <div class="para">
+                  <p>Imaginovation’s knowledgeable and experienced staff have worked closely with us on designing our web site, meeting the unique needs of our business. </p>
+                </div>
+                <a href="./" title="Muzic Book">
+                  <img width="131" height="131" src="http://www.imaginovation.net/wp-content/uploads/2014/02/11.png" class="attachment-promotions-thumb wp-post-image" alt="11" title="Muzic Book" />
+                </a>
+                <h3>Mark Stevens</h3>
+                <h4 class="">CEO</h4>
+                <div class="quoteend">
+                  <img src="img/testimonial-quat-end.png" alt="testimonial" />
+                </div>
+              </li>
+              <li>
+                <div class="quote">
+                  <img src="img/testimonial-quat.png" alt="testimonial" />
+                </div>
+                <div class="para">
+                  <p>NetSports is pleased to have partnered with Imaginovation to redesign our company web page. Imaginovation has done a great job of fulfilling our company&#8217;s </p>
+                </div>
+                <a href="./" title="Netsports">
+                  <img width="131" height="131" src="http://www.imaginovation.net/wp-content/uploads/2014/02/netsports_logo1.png" class="attachment-promotions-thumb wp-post-image" alt="netsports_logo" title="Netsports" />
+                </a>
+                <h3>Chris McClellan</h3>
+                <h4 class="">General Manager </h4>
+                <div class="quoteend">
+                  <img src="img/testimonial-quat-end.png" alt="testimonial" />
+                </div>
+              </li>
+              <li>
+                <div class="quote">
+                  <img src="img/testimonial-quat.png" alt="testimonial" />
+                </div>
+                <div class="para">
+                  <p>The Imaginovation team have been absolutely great for our company. They showed true integrity, honesty, creativity, strategy , and incredible technical abilities. </p>
+                </div>
+                <a href="./" title="Legacy Healthcare">
+                  <img width="131" height="131" src="http://www.imaginovation.net/wp-content/uploads/2014/02/legacy1.png" class="attachment-promotions-thumb wp-post-image" alt="legacy" title="Legacy Healthcare" />
+                </a>
+                <h3>Charles Hale</h3>
+                <h4 class="">IT Manager </h4>
+                <div class="quoteend">
+                  <img src="img/testimonial-quat-end.png" alt="testimonial" />
+                </div>
+              </li>
+              <li>
+                <div class="quote">
+                  <img src="img/testimonial-quat.png" alt="testimonial" />
+                </div>
+                <div class="para">
+                  <p>The Imaginovation team was a very good and professional web development company to work with. They satisfied all of our needs and requirements in  designing our corporate website. </p>
+                </div>
+                <a href="./" title="TES – LLC">
+                  <img width="131" height="131" src="http://www.imaginovation.net/wp-content/uploads/2014/02/04.png" class="attachment-promotions-thumb wp-post-image" alt="04" title="TES – LLC" />
+                </a>
+                <h3>Curtis Linley</h3>
+                <h4 class="">Managing Director </h4>
+                <div class="quoteend">
+                  <img src="img/testimonial-quat-end.png" alt="testimonial" />
+                </div>
+              </li>
+              <li>
+                <div class="quote">
+                  <img src="img/testimonial-quat.png" alt="testimonial" />
+                </div>
+                <div class="para">
+                  <p>Intuitive and Savvy. Imaginovation understood our vision and had the technical prowess to achieve it. We had very specific goals in mind, </p>
+                </div>
+                <a href="./" title="Certified Concrete Construction">
+                  <img width="131" height="131" src="http://www.imaginovation.net/wp-content/uploads/2014/02/CCClogo2.png" class="attachment-promotions-thumb wp-post-image" alt="CCClogo" title="Certified Concrete Construction" />
+                </a>
+                <h3>Johnny Sousa</h3>
+                <h4 class="">Operations Manager </h4>
+                <div class="quoteend">
+                  <img src="img/testimonial-quat-end.png" alt="testimonial" />
+                </div>
+              </li>
+              <li>
+                <div class="quote">
+                  <img src="img/testimonial-quat.png" alt="testimonial" />
+                </div>
+                <div class="para">
+                  <p>It was a pleasure working with Imaginovation, LLC. They are a professional organization I would recommend to any </p>
+                </div>
+                <a href="./" title="TeleCycle">
+                  <img width="131" height="131" src="http://www.imaginovation.net/wp-content/uploads/2014/02/14.png" class="attachment-promotions-thumb wp-post-image" alt="14" title="TeleCycle" />
+                </a>
+                <h3>Bob Hathaway</h3>
+                <h4 class="">President </h4>
+                <div class="quoteend">
+                  <img src="img/testimonial-quat-end.png" alt="testimonial" />
+                </div>
+              </li>
+              <li>
+                <div class="quote">
+                  <img src="img/testimonial-quat.png" alt="testimonial" />
+                </div>
+                <div class="para">
+                  <p>I would highly recommend Imaginovation LLC. These guys operate with a level of integrity that is second to none. </p>
+                </div>
+                <a href="./" title="Concierge Marketing">
+                  <img width="131" height="131" src="http://www.imaginovation.net/wp-content/uploads/2014/02/Concierge_marketing.png" class="attachment-promotions-thumb wp-post-image" alt="Concierge_marketing" title="Concierge Marketing" />
+                </a>
+                <h3>Wes White</h3>
+                <h4 class="">Owner </h4>
+                <div class="quoteend">
+                  <img src="img/testimonial-quat-end.png" alt="testimonial" />
+                </div>
+              </li>
+              <li>
+                <div class="quote">
+                  <img src="img/testimonial-quat.png" alt="testimonial" />
+                </div>
+                <div class="para">
+                  <p>The guys at Imaginovation have been great. They were very responsive to questions and have worked very hard to create our vision. </p>
+                </div>
+                <a href="./" title="Solutions for Teachers">
+                  <img width="131" height="131" src="http://www.imaginovation.net/wp-content/uploads/2014/02/05.png" class="attachment-promotions-thumb wp-post-image" alt="05" title="Solutions for Teachers" />
+                </a>
+                <h3>Matt Ridenour</h3>
+                <h4 class="">Owner</h4>
+                <div class="quoteend">
+                  <img src="img/testimonial-quat-end.png" alt="testimonial" />
+                </div>
+              </li>
+              <li>
+                <div class="quote">
+                  <img src="img/testimonial-quat.png" alt="testimonial" />
+                </div>
+                <div class="para">
+                  <p>The team at Imaginovation have been great! They were very patient and understanding about what we wanted for our website.</p>
+                </div>
+                <a href="./" title="Eagle Eye Security">
+                  <img width="131" height="131" src="http://www.imaginovation.net/wp-content/uploads/2014/02/07.png" class="attachment-promotions-thumb wp-post-image" alt="07" title="Eagle Eye Security" />
+                </a>
+                <h3>Brian White</h3>
+                <h4 class="">CEO</h4>
+                <div class="quoteend">
+                  <img src="img/testimonial-quat-end.png" alt="testimonial" />
+                </div>
+              </li>
+              <li>
+                <div class="quote">
+                  <img src="img/testimonial-quat.png" alt="testimonial" />
+                </div>
+                <div class="para">
+                  <p>I switched website companies about 6 months ago. I went from an internationally known website design company to Imaginovation.</p>
+                </div>
+                <a href="./" title="Wilsonlaw">
+                  <img width="131" height="131" src="http://www.imaginovation.net/wp-content/uploads/2014/01/testimonial1.png" class="attachment-promotions-thumb wp-post-image" alt="testimonial1" title="Wilsonlaw" />
+                </a>
+                <h3>Kimberly Wilson</h3>
+                <h4 class="">Managing Shareholder</h4>
+                <div class="quoteend">
+                  <img src="img/testimonial-quat-end.png" alt="testimonial" />
+                </div>
+              </li>
+              <li>
+                <div class="quote">
+                  <img src="img/testimonial-quat.png" alt="testimonial" />
+                </div>
+                <div class="para">
+                  <p>I started out with an idea &#8211; a solution to help people better plan for the unknown &#8211; but I didn&#8217;t know how to develop that idea into secure, software until I met Imaginovation. </p>
+                </div>
+                <a href="./" title="Principled heart">
+                  <img width="131" height="131" src="img/testimonial2.png" class="attachment-promotions-thumb wp-post-image" alt="testimonial2" title="Principled heart" />
+                </a>
+                <h3>William Bissett</h3>
+                <h4 class="">CEO</h4>
+                <div class="quoteend">
+                  <img src="img/testimonial-quat-end.png" alt="testimonial" />
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="testfooter">
+            <p>
+              <a href="#" target="_blank" title="Yellow Pages">
+                <img src="img/logo-yellopages.png" alt="logo-yellopages" class="videoimage">CLICK HERE VIEW to all <br>our reviews in Yellow Pages
+              </a>
+            </p>
+          </div>
+        </article>
+      </section>
+      <section  id="client" class="frame" data-speed="7" data-type="background" data-offsetY="500">
+        <article class="postservice">
+          <p class="whatwedo">Our Clients</p>
+          <ul class="clientimages">
+            <li>
+              <img src="http://www.imaginovation.net/wp-content/uploads/2014/09/client_first.png" alt="clientimages"/>
+            </li>
+            <li>
+              <img src="http://www.imaginovation.net/wp-content/uploads/2014/09/client_second.png" alt="clientimages" />
+            </li>
+            <li>
+              <img src="http://www.imaginovation.net/wp-content/uploads/2014/09/third_row-nw1.png" alt="clientimages" />
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section id="credibility">
+        <article class="postservice">
+          <div class="credibility-main">
+            <p class="whatwedo">Press</p>
+            <div class="credibili">
+              <ul class="credibili-images">
+                <li><img src="img/cred-1.png" alt="client" /></li>
+                <li><img src="img/cred-2.png" alt="client" /></li>
+                <li><img src="img/cred-3.png" alt="client" /></li>
+                <li><img src="img/cred-4.png" alt="client" /></li>
+                <li><img src="img/cred-5.png" alt="client" /></li>
+                <li><img src="img/cred-6.png" alt="client" /></li>
+                <li><img src="img/cred-7.png" alt="client" /></li>
+                <li><img src="img/cred-8.png" alt="client" /></li>
+                <li><img src="img/cred-9.png" alt="client" /></li>
+                <li><img src="img/cred-10.png" alt="client" /></li>
+              </ul>
+            </div>
+          </div>
+          <div class="credibili-foot-main">
+            <div class="credibili-wrapper">
+              <div class="credibili-foot">
+                <div class="credibili-left">
+                  <div class="Credi credi0">
+                    <h2>Web Design</h2>
+                    <div class="menu-web-design-container">
+                      <ul id="menu-web-design" class="">
+                        <li id="menu-item-1230" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1230">
+                          <a title="Web Design" href="./">Web Design</a>
+                        </li>
+                        <li id="menu-item-431" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-431">
+                          <a title="Responsive Web Design" href="http://www.imaginovation.net/responsive-web-design-services-raleigh-nc/">Responsive Web Design</a>
+                        </li>
+                        <li id="menu-item-889" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-889">
+                          <a title="Corporate Branding" href="http://www.imaginovation.net/branding-design-services-raleigh-nc/">Corporate Branding</a>
+                        </li>
+                        <li id="menu-item-888" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-888">
+                          <a title="Content Management Systems" href="http://www.imaginovation.net/content-management-system-cms-services-raleigh-nc/">Content Management Systems</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="Credi credi1">
+                    <h2>Web &amp; Software Solutions</h2>
+                    <div class="menu-web-development-container">
+                      <ul id="menu-web-development" class="">
+                        <li id="menu-item-891" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-891">
+                          <a title="Web Development" href="./">Web Development</a>
+                        </li>
+                        <li id="menu-item-433" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-433">
+                          <a title="E-Commerce  Development" href="http://www.imaginovation.net/e-commerce-development-services-raleigh-nc/">E-Commerce  Development</a>
+                        </li>
+                        <li id="menu-item-1039" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1039">
+                          <a title="Software Development" href="http://www.imaginovation.net/software-development-services-raleigh-nc/">Software Development</a>
+                        </li>
+                        <li id="menu-item-893" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-893">
+                          <a title="Custom Application Development" href="http://www.imaginovation.net/custom-application-development-services/">Custom Application Development</a>
+                        </li>
+                        <li id="menu-item-892" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-892">
+                          <a title="Database Development" href="http://www.imaginovation.net/database-development-services-raleigh-nc/">Database Development</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="Credi credi2">
+                    <h2>Digital Marketing</h2>
+                    <div class="menu-digital-marketing-container">
+                      <ul id="menu-digital-marketing" class="">
+                        <li id="menu-item-894" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-894">
+                          <a title="Digital Marketing Campaigns" href="http://www.imaginovation.net/digital-marketing-agency-raleigh-nc/">Digital Marketing Campaigns</a>
+                        </li>
+                        <li id="menu-item-895" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-895">
+                          <a title="Internet Marketing" href="http://www.imaginovation.net/internet-marketing-services-raleigh-nc/">Internet Marketing</a>
+                        </li>
+                        <li id="menu-item-897" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-897">
+                          <a title="Search Engine Optimization" href="http://www.imaginovation.net/search-engine-optimization-seo-services-raleigh-nc/">Search Engine Optimization</a>
+                        </li>
+                        <li id="menu-item-898" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-898">
+                          <a title="Social Media Marketing" href="http://www.imaginovation.net/social-media-marketing-services-raleigh-nc/">Social Media Marketing</a>
+                        </li>
+                        <li id="menu-item-896" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-896">
+                          <a title="Search Engine Marketing" href="http://www.imaginovation.net/search-engine-marketing-services-raleigh-nc/">Search Engine Marketing</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="Credi credi3">
+                    <h2>Mobile Solutions &amp; Others</h2>
+                    <div class="menu-mobile-sulution-and-others-container">
+                      <ul id="menu-mobile-sulution-and-others" class="">
+                        <li id="menu-item-900" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-900"><a title="Mobile Design" href="http://www.imaginovation.net/mobile-web-design-and-development-firm/">Mobile Design</a></li>
+                        <li id="menu-item-899" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-899"><a title="Mobile Application Development" href="http://www.imaginovation.net/mobile-application-development-services-raleigh-nc/">Mobile Application Development</a></li>
+                        <li id="menu-item-901" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-901"><a title="Hosting" href="http://www.imaginovation.net/website-hosting-services-raleigh-nc/">Hosting</a></li>
+                        <li id="menu-item-902" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-902"><a title="Maintenance" href="http://www.imaginovation.net/website-maintenance-services-raleigh-nc/">Maintenance</a></li>
+                        <li id="menu-item-903" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-903"><a title="Testing" href="http://www.imaginovation.net/quality-assurance-and-testing-services/">Testing</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="Credi  credi4">
+                    <h2>About Us</h2>
+                    <div class="menu-about-us-container">
+                      <ul id="menu-about-us" class="">
+                        <li id="menu-item-906" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-906"><a title="Who Are We?" href="h./">Who Are We?</a></li>
+                        <li id="menu-item-907" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-907"><a title="Why Imaginovation ?" href="./">Why Imaginovation ?</a></li>
+                        <li id="menu-item-905" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-905"><a title="Technologies" href="./">Technologies</a></li>
+                        <li id="menu-item-935" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-935"><a title="Our Team" href="./">Management</a></li>
+                        <li id="menu-item-904" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-904"><a title="Our Process" href="./">Our Process</a></li>
+                        <li id="menu-item-908" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-908"><a title="Client Testimonials" href="./">Client Testimonials</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="credibili-foot-main1">
+            <div class="wrapper">
+              <div class="footbanner">
+                <h2>Credibility</h2>
+                <a href="http://www.raleighchamber.com/Search-Engine-Optimization/Imaginovation-20843" target="_blank" title="Chamber of Commerce"><img src="img/chamber.png" alt="chanber" class="cham"/></a> 
+                <a href="http://www.bbb.org/raleigh-durham/business-reviews/web-designers/imaginovation-in-raleigh-nc-90259586" target="_blank" title="BBB"><img src="img/accred.png" alt="accred" /> </a></div>
+              <div class="footsocial">
+                <div class="follow">
+                  <h2>Get Social</h2>
+                  <ul>
+                    <li class="facebook"><a href="https://www.facebook.com/pages/Imaginovation-LLC/245733655479674?ref=hl" title="Facebook" target="_blank">Facebook</a></li>
+                    <li class="googleplus"><a href="https://plus.google.com/118267228649164685255/posts" title="Googleplus" target="_blank">Googleplus</a></li>
+                    <li class="twitter"><a href="https://twitter.com/ImaginovationCo" title="Twitter" target="_blank">Twitter</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footmap"> <img src="img/map-foot.png" alt="footmap" />
+                <div class="mapaddress">
+                  <h2>Address</h2>
+                  <br />
+                  <p>IMAGINOVATION LLC<br/>
+                    8369 Creedmoor Rd #100,<br/>
+                    Raleigh, NC <br/>
+            27613</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="credibili-foot-main2">
+            <div class="wrapper">
+              <div class="copy_foot">
+                <ul class="copy_foot-menu">
+                  <li>
+                    <div class="menu-footer-container">
+                      <ul id="menu-footer" class="">
+                        <li id="menu-item-437" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-437"><a title="Home" href="http://www.imaginovation.net/">Home</a></li>
+                        <li id="menu-item-1256" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1256"><a title="Services" href="http://www.imaginovation.net/web-design-and-development-services-raleigh-nc/">Services</a></li>
+                        <li id="menu-item-441" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-441"><a title="Portfolio" href="./">Portfolio</a></li>
+                        <li id="menu-item-767" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-767"><a title="About Us" href="h./">About Us</a></li>
+                        <li id="menu-item-439" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-439"><a title="Blog" href="http://www.imaginovation.net/blog/">Blog</a></li>
+                        <li id="menu-item-440" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-440"><a title="Contact" href="http://www.imaginovation.net/contact-us/">Contact</a></li>
+                        <li id="menu-item-445" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-445"><a title="Site Map" href="http://www.imaginovation.net/site-map/">Site Map</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+                <p>All content, web design and development, layouts are &copy; Copyright 2012 - 2013 <a href="http://www.imaginovation.net/" title="Imaginovation.net" style="color:#8A8B8A">Imaginovation.net.</a> </p>
+                <p>All rights reserved. Reproduction in whole or in part or in any form or medium without written permission is prohibited!</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </div>
+    <!--wreper ends-->
+    <ul id="footer-top">
+      <a id="top" href="#gallery" title="Scroll to the Top"><img src="img/testimonial-button-top.png" alt="footmap" /></a>
+    </ul>
+  </div>
+  <!-- #main -->
+  <script type="text/javascript" src="js/classie.js"></script>
+  <script type="text/javascript" src="js/cbpAnimatedHeader.min.js"></script>
+</body>
+</html>

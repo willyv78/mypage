@@ -1,0 +1,43 @@
+Colores que me gustan para mi web
+
+color background section
+#268870
+#CA5555
+#745363
+#56ACC2
+#ff931e
+#bc3b0c
+#428bca
+
+color letras section 
+#EEEEEE
+
+WVAPP
+VVVAPP
+WILVEAPP
+WVELAPP
+VELAPP
+DIVELAPP
+DDWVAPP
+DIDEAPP
+WILSIDE
+WII-SIDE
+Wii-SIDE
+WEB-SIDE
+NOSLIWEB
+BACKEND
+FRONTEND
+DISEÑO
+DESARROLLO
+DESING
+DEVELOPER
+codigo
+lenguajes
+bases de datos
+revolucionando.la
+evolucionando.la
+programar
+desarrollo
+recursos
+solucionar
+fullstackweb

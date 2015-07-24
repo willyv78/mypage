@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Wilson Velandia</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+$('a.scroll').click(function(e){
+    e.preventDefault();
+    $('html, body').stop().animate({scrollTop: $($(this).attr('href')).offset().top}, 1000);
+});
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Menú</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Wilson Velandia</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">¿Quién Soy?</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">¿Que Hago?</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#clientes">¿A Quien?</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">¿Donde?</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Section -->
+    <section id="intro" class="intro-section">
+        <div class="container">
+            <div class="row">
+                <div class="clearfix">&nbsp;</div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="col-lg-12">
+                    <h1>Análisis, Planeación, Diseño, Desarrollo y Soporte.</h1>
+                    <h2>
+						<div>APPs, WEBs, Tiendas Online, Admnistradores de contenido (CMS), Blogs.</div>		  
+					</h2>
+					<h3>
+						<div>Buenas prácticas de diseño, desarrollo y SEO.</div>
+					</h3>
+                    <h4>
+                        <div>Actualización de páginas WEB, Optimización para buscadores, Admnistración de redes sociales, migracion de base de datos.</div>
+                    </h4>
+                    <div class="clearfix">&nbsp;</div>
+					<!--  que mejorarán la experiencia de navegación de sus usuarios y colocarán su sitio en la cima de los buscadores -->
+                    <p>
+						<a class="btn btn-warning page-scroll" href="#about">Saber más!</a>
+					</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿Quien soy? Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="clearfix">&nbsp;</div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="col-lg-12">
+                    <h2>¿Quien Soy?</h2>
+                    <div class="clearfix">&nbsp;</div>
+					<div>
+						<img src="img/wilsonv.jpg" width="220px" height="220px" style="border-radius:100%;border:5px solid #CCCCCC" />
+					</div>
+                    <div class="clearfix">&nbsp;</div>
+					<h3>
+						<p>
+							<div>Ingeniero de sistemas de título, desarrollador de software de profesión, padre de familia y esposo de pasión, amigo y compañero de corazón y jugador de futbol de obsesión.</div>
+						</p>
+                        <div class="clearfix">&nbsp;</div>
+						<p>
+							<div>Constantemente capacitandome, promulgo el respeto y la buena actitud.</div>
+						</p>
+					</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿Que Hago? Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="row">
+                <div class="clearfix">&nbsp;</div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="col-lg-12">
+                    <h2>¿Que Hago?</h2>
+                    <div class="clearfix">&nbsp;</div>
+					<h3>
+						<p>
+							<div>Planifico, diseño y desarrollo sitios WEB, software de escritorio y aplicaciones para dispositivos móbiles.</div>
+						</p>
+                        <div class="clearfix">&nbsp;</div>
+						<p>
+							<div>Desarrollo en diferentes lenguajes de programación, utilizo varios IDE y frameworks para el desarrollo, manejo software de diseño grafico, además me ayudo con muchas herramientas para testing, SEO, marketing y otras tareas en mi trabajo.</div>
+						</p>
+					</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿A quien? Section -->
+    <section id="clientes" class="clientes-section">
+        <div class="container">
+            <div class="row">
+                <div class="clearfix">&nbsp;</div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="col-lg-12">
+                    <h2>¿A Quien?</h2>
+                    <div class="clearfix">&nbsp;</div>
+					<h3>
+						<p>
+							<div>A personas naturales o juridicas, empresas privadas o públicas, organizaciones con o sin animo de lucro, fundaciones, familiares (que paguen), vecinos y vecinas, mascotas y a todo aquel que desee crear un nuevo sitio, software o aplicación o si ya posee uno y quiera actualizarlo.</div>
+						</p>
+                        <div class="clearfix">&nbsp;</div>
+						<p>
+							<div>Algunos de mis clientes: Alcaldía de Funza, Editores Hache, Tributar Asesores, R + B diseño Experimental, secretaria de transito de Malaga, T&S soluciones, Alcaldía de Girardot, DNE, el Heraldo.</div>
+						</p>
+					</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿Donde? Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="clearfix">&nbsp;</div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="clearfix">&nbsp;</div>
+                <div class="col-lg-12">
+                    <h2>¿Donde?</h2>
+                    <div class="clearfix">&nbsp;</div>
+					<h3>
+                        <p>Twitter: @willyv78</p>
+                        <p>Móvil: 3165879350 - 3204274564</p>
+						<p>willyv78@gmail.com</p>
+                        <p>Carrera 144A # 132-21</p>
+						<p>Bogotá - Colombia.</p>
+					</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+
+    <script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
+    <script type="text/javascript">twttr.conversion.trackPid('l6grq', { tw_sale_amount: 0, tw_order_quantity: 0 });</script>
+    <noscript>
+    <img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=l6grq&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+    <img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l6grq&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+    </noscript>
+
+</body>
+
+</html>

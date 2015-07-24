@@ -1,0 +1,206 @@
+.cbp-af-header {
+	position:absolute;
+	bottom:0;
+	left: 0;
+	width: 100%;
+	background: #fff;
+	z-index: 10000;
+	height: 90px;
+	border-bottom:2px solid #d1d1d1;
+}
+
+.cbp-af-header .cbp-af-inner {
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 960px;
+}
+
+.cbp-af-header h1,
+.cbp-af-header nav {
+	display: inline-block;
+	position: relative;
+}
+
+
+
+ /* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
+.cbp-af-header h1.logo a
+{
+	background:url(../img/logo-imaginovation.png) no-repeat;
+    height: 57px;
+    margin-bottom: 20px;
+    margin-top:0px;
+    position: absolute;
+    text-indent: -9999px;
+    width: 200px;
+	
+}
+
+.cbp-af-header.cbp-af-header-shrink h1.logo a
+{
+	
+	
+}
+
+
+
+.searchtop{ 
+	float: right;
+    margin-bottom: 10px;
+    width: 290px;
+}
+
+.cbp-af-header .site-navigation {
+    float: left;
+    width: 400px;
+}
+
+
+/* Transitions and class for reduced height */
+
+
+.cbp-af-header.cbp-af-header-shrink {
+	height:90px;
+	border-bottom:2px solid #d1d1d1;
+	position:fixed;
+	top:0;
+	
+}
+
+
+.cbp-af-header.cbp-af-header-shrink nav ul li.menu-item-638 ul.sub-menu
+{
+	left:-308px;
+}
+
+
+/* Example Media Queries */
+@media screen and (max-width: 55em) {
+	
+	.cbp-af-header .cbp-af-inner {
+		width: 100%;
+	}
+
+	.cbp-af-header h1,
+	.cbp-af-header nav {
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+		float: none;
+	}
+
+	.cbp-af-header h1,
+	.cbp-af-header nav a {
+		line-height: 115px;
+	}
+
+	.cbp-af-header nav a {
+		margin: 0 10px;
+	}
+
+	.cbp-af-header.cbp-af-header-shrink h1,
+	.cbp-af-header.cbp-af-header-shrink nav a {
+		line-height: 45px;
+	}
+
+	.cbp-af-header.cbp-af-header-shrink h1 {
+		font-size: 2em;
+	}
+
+	.cbp-af-header.cbp-af-header-shrink nav a {
+		font-size: 1em;
+	}
+}
+
+@media screen and (max-width: 32.25em) {
+	.cbp-af-header nav a {
+		font-size: 1em;
+	}
+}
+
+@media screen and (max-width: 24em) {
+	.cbp-af-header nav a,
+	.cbp-af-header.cbp-af-header-shrink nav a {
+		line-height: 1;
+	}
+}
+ @media screen and (min-width:100px) and (max-width:700px) {
+
+.cbp-af-header .logoleft {
+    float: left;
+    height: 47px;
+    margin-left: 10px;
+    margin-top: 12px;
+    width: auto;
+}
+
+.cbp-af-header
+{
+	height:90px;
+}
+a.searchtop-a {
+    background:#E71A21;
+    border-radius: 15px;
+    color: #FFFFFF;
+    float: left;
+    font: 11px 'ubuntulight';
+    height: auto;
+    padding: 6px 12px;
+    text-align: center;
+    text-indent: 0;
+    text-transform: uppercase;
+    width: auto;
+	margin-top:2px;
+}
+
+.searchtop {
+    clear: both;
+    float: none;
+    margin: 0 auto;
+    width: 310px;
+}
+
+.searchtop span {
+    color: #6A6A6A;
+    float: left;
+    font: 11px 'ubuntumedium';
+    margin: 7px 8px 0;
+    text-transform: uppercase;
+}
+
+
+.searchtop a.clogin {
+    background:#D1D1D1;
+    border-radius: 15px;
+    color: #FFFFFF;
+    display: inline;
+    float: left;
+    font: 11px 'ubuntulight';
+    height: auto;
+    margin-top: 0;
+    padding: 6px 12px;
+    text-indent: 0;
+    text-transform: uppercase;
+    width: auto;
+}
+
+
+.cbp-af-header h1.logo a
+ { 
+    margin-top: 0;
+    transition: all 0.3s ease 0s;
+    width: 200px;
+	
+}
+
+.cbp-af-header.cbp-af-header-shrink {
+	height:90px;
+	border-bottom:2px solid #d1d1d1;
+	
+}
+
+
+
+
+
+}
